@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<title>thebooksniffer.com</title>
+<!-- meta charset yang dibawah, gunanya buat nentuin encoding dari HTL ini, jadi encoding nya html ini itu UTF-8-->
+<meta charset="UTF-8">
+<!-- meta dibawah buat ngatur layar pas pertama kali di load, trus pas diliat buat di hp dll, jadi biar responsive aja webnya-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Buat nambahin css dari luar file ini, w3.css buat library class,
+ jadi kayak bootstrap gitu, kalo fonts.css buat ikon2 kecil gitu,
+ yang gw pake dibawah, kalo yang style ya css buat ngatur yang slideshow, ya style yang gampang2 lah wkwk-->
+<link rel="stylesheet" href="assets/css/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- buat nambahin javascript dari luar file ini, file js yang dibawah, buat ngatur navbar pas discroll bakalan ngikuts-->
+<script src="assets/js/script.js"></script>
+<body>
+
+<!-- Navbar biasa, tp kalo layarnya dikecilin, navbar yang ini bakalan ilang keganti ama yang bawah-->
+ <div class="w3-top">
+	<div class="w3-bar w3-row w3-white w3-card" id="myNavbar">
+		<div class="w3-twothird">
+			<a href="#home" class="w3-bar-item"><img src="assets/img/logo_bs.png" height=55px" style="margin-top: 10px;"></a>
+		</div>
+		<div class="w3-third">
+			<a href="#home" class="w3-bar-item w3-hover-text-salmon" style="line-height:80px;text-decoration:none;font-size:18px;color:darkgrey;">Beranda</a>	
+			<div class="w3-dropdown w3-dropdown-hover w3-hover-text-salmon"
+			style="text-decoration:none;font-size:18px;color:darkgrey;">
+					<button class="w3-button w3-hover-text-salmon" id="m-dropdown">Dee's Works</button>
+					<div class="w3-dropdown-content w3-bar-block w3-border">
+						<a href="#novel" class="w3-bar-item w3-hover-text-salmon"
+						style="text-decoration:none;font-size:18px;color:darkgrey;">Novel</a>
+						<a href="#film" class="w3-bar-item w3-hover-text-salmon"
+						style="text-decoration:none;font-size:18px;color:darkgrey;">Film</a>
+						<a href="#lagu" class="w3-bar-item w3-hover-text-salmon"
+						style="text-decoration:none;font-size:18px;color:darkgrey;">Lagu</a>
+					</div>
+			</div>
+			<a href="#about" class="w3-bar-item w3-hover-text-salmon w3-hide-small" style="line-height:80px;text-decoration:none;font-size:18px;color:darkgrey;">About</a>
+			<a href="#contact" class="w3-bar-item w3-hide-small w3-hover-text-salmon" style="line-height:80px;text-decoration:none;font-size:18px;color:darkgrey;">Contact</a>
+		</div>
+	</div>
+</div>
+
+  <!-- Navbar buat layar kecil, jadi kalo layar laptop dan komputer gabakalan keliatan ini, tp klo dihp bakalan otomatis keluar-->
+	<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+		<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+		<a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+		<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+		<a href="#" class="w3-bar-item w3-button">SEARCH</a>
+	</div>
+</div>
+
+<!-- Tempat buat Gambar background pertama -->
+<div class="bgimg-1 w3-display-container" id="home" style="background-image: url('assets/img/background/home.jpg');min-height:100%;">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+	<!-- Tulisannya yang digambar pertama -->
+    <p class="w3-xlarge w3-text-black w3-animate-opacity" style="letter-spacing: 3px;"><b>Baca Buku Terbaru Dee</b></p>
+	<center><span class="w3-padding-large w3-xlarge w3-animate-opacity" style="color: white; background-color: salmon;">
+	<a href="https://www.bookslife.co/product-detail/Aroma-Karsa" style=" text-decoration: none;">
+		Available Now!
+	</a></span></center>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-salmon w3-padding-16">
+  <div class="w3-quarter w3-section w3-text-white">
+    <span class="w3-xlarge">Karya</span><br>
+    <span class="w3-xlarge">Dee:</span>
+  </div>
+  <div class="w3-quarter w3-section w3-text-white"">
+    <span class="w3-xlarge">13</span><br>
+    Novel Fiksi
+  </div>
+  <div class="w3-quarter w3-section w3-text-white">
+    <span class="w3-xlarge">5</span><br>
+    Film
+  </div>
+  <div class="w3-quarter w3-section w3-text-white">
+    <span class="w3-xlarge">2</span><br>
+    Album
+  </div>
+</div>
+
+<!-- Gambar kedua buat background belakang -->
+<div id="novel" class="bgimg-2 w3-display-container" style="background-image: url('assets/img/background/contact.jpg');">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-black w3-wide " style="text-shadow:2px 2px 2px whitesmoke;">Novel oleh Dee</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+	<div class="slideshow-container">
+		
+			<div class="mySlides fade">
+				<img src="assets/img/slide/aroma.png" style="width:100%">
+				<div class="w3-display-topmiddle"><br>
+					<span class="w3-xlarge w3-text-black" 
+					style="text-shadow:2px 2px 2px whitesmoke; margin-left: 260px;">Aroma Karsa (2018)</span>
+				</div>
+				<div class="w3-display-middlea">
+					<span class="w3-large w3-text-black
+					m6 w3-hide-small" 
+					style="text-shadow:2px 2px 2px whitesmoke;">
+					Jati Wesi, pria 26 tahun, tinggal di TPA Bantar Gebang selama hidupnya. Ia diasuh oleh penadah bernama Nurdin Suroso yang memperkerjakan Jati sejak kecil. Di antara berbagai pekerjaan kasar yang dilakukan Jati, ada satu profesi yang paling ia banggakan, yakni peracik parfum. Penciuman Jati yang sangat tajam memampukannya meniru segala parfum dengan akurat, bahkan lebih baik.
+					</span><br><br>
+					<span class="w3-padding-large w3-large w3-animate-opacity" style="color: white; background-color: salmon;">
+					<a href="https://www.bookslife.co/product-detail/Aroma-Karsa" style=" text-decoration: none;">
+						Lanjutkan baca...
+					</a></span></center>
+				</div>
+			</div>
+			<div class="mySlides fade">
+					<img src="assets/img/slide/iep.png" style="width:100%">
+				<div class="w3-display-topmiddle-judul"><br>
+					<span class="w3-xlarge w3-text-black" 
+					style="text-shadow:2px 2px 2px whitesmoke; margin-left: 230px;">Supernova (2016)</span>
+				</div>
+				<div class="w3-display-middlea">
+					<span class="w3-large w3-text-black
+					m6 w3-hide-small" 
+					style="text-shadow:2px 2px 2px whitesmoke;">
+					Berbekal petunjuk dari pria bernama Amaru yang menemuinya di Cusco, Gio berangkat ke Lembah Suci Urubamba. Di sana, ia dijemput oleh Chaska Pumachua, ibu sahabatnya. Chaska memperkenalkannya kepada seorang syaman bernama Luca alias Smoking Sun. Luca ternyata telah menyiapkan upacara Ayahuasca bagi Gio.
+					</span><br><br>
+					<span class="w3-padding-large w3-large w3-animate-opacity" style="color: white; background-color: salmon;">
+					<a href="https://www.goodreads.com/book/show/28937283-inteligensi-embun-pagi" style=" text-decoration: none;">
+						Lanjutkan baca...
+					</a></span></center>
+				</div>
+			</div>
+			<div class="mySlides fade">
+					<img src="assets/img/slide/filkop.png" style="width:100%">
+				<div class="w3-display-topmiddle-judul"><br>
+					<span class="w3-xlarge w3-text-white" 
+					style="margin-left: 230px;">Filosofi Kopi (2013)</span>
+				</div>
+				<div class="w3-display-middlea">
+					<span class="w3-large w3-text-white
+					m6 w3-hide-small" 
+					style="">
+					Dua sahabat, Ben dan Jody, berambisi untuk meramu kopi dengan citarasa sempurna. Kedai mereka, Filosofi Kopi, adalah tempat yang begitu dicintai. Bukan hanya karena kopi yang luar biasa, melainkan juga karisma Ben sebagai seorang barista. Ben’s Perfecto, mahakarya Ben, akhirnya harus berhadapan dengan Kopi Tiwus, kopi sederhana dari sebuah warung di desa kecil milik Pak Seno.
+					</span><br><br>
+					<span class="w3-padding-large w3-large w3-animate-opacity" style="color: white; background-color: chocolate;">
+					<a href="https://www.goodreads.com/book/show/1244286.Filosofi_Kopi" style=" text-decoration: none;">
+						Lanjutkan baca...
+					</a></span></center>
+				</div>
+			</div>
+			<div class="mySlides fade">
+					<img src="assets/img/slide/recto.png" style="width:100%">
+				<div class="w3-display-topmiddle-judul"><br>
+					<span class="w3-xlarge w3-text-white" 
+					style="margin-left: 230px;">Rectoverso (2013)</span>
+				</div>
+				<div class="w3-display-middlea">
+					<span class="w3-large w3-text-white
+					m6 w3-hide-small" 
+					style="">
+					Sebelas kisah yang bercermin dengan sebelas lagu dari album Rectoverso merupakan karya Dee yang paling unik. Hibrida musik dan sastra pertama di Indonesia.<br>
+					Curhat Buat Sahabat, Malaikat Juga Tahu, Selamat Ulang Tahun, Aku Ada, Hanya Isyarat, Peluk, Grow A Day Older, Cecak Di Dinding, Firasat, Tidur, Back to Heaven’s Light adalah judul dari isi Rectoverso.
+					</span><br><br>
+					<span class="w3-padding-large w3-large w3-animate-opacity" style="color: white; background-color: white;">
+					<a href="https://www.goodreads.com/book/show/1244286.Filosofi_Kopi" style="color: green; text-decoration: none;">
+						Lanjutkan baca...
+					</a></span></center>
+				</div>
+			</div>
+		
+		<!-- ini fungsi buat mindahin gambar ke gambar sebelumnya-->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<!-- ini fungsi buat mindahin gambar ke gambar sesudahnya-->
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<div style="text-align:center">
+		
+			<!-- disini kan ada tulisan "currentSlides(), itu fungsinya 
+			disaat kita ngeklik titik yang ada dibawah slideshow, slideshownya bakalan otomatis pindah ke gambar yang kita pilih
+			contohnya, kalo kita klik titik yang kedua, gambar yang kedua dari 10 itu yang bakalan keluar jadi slideshownya"-->
+			<br>
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		
+	</div>
+</div>
+
+<div id="film" class="bgimg-2 w3-display-container" style="background-image: url('assets/img/background/film.jpeg');">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide " style="text-shadow:2px 2px 2px whitesmoke;">Film oleh Dee</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" style="margin-left: 230px;">
+	<h3 class="w3-center">Film-film dari buku Dee Lestari</h3>
+		<div class="box">
+			<figure class="cap-left">
+				<img src="assets/img/film/madre.jpg">
+			<figcaption>
+			Madre (2013)<br>Rating IMDB: 6.0<br>
+			</figcaption>
+		</div>
+		<div class="box">
+			<figure class="cap-left">
+			<img src="assets/img/film/filkop.jpg">
+			<figcaption>
+			Filosofi Kopi (2013)<br>Rating IMDB: 7.2<br>
+			</figcaption>
+		</div>
+		<div class="box">
+			<figure class="cap-left">
+			<img src="assets/img/film/perahu-kertas.jpg">
+			<figcaption>
+			Perahu Kertas (2013)<br>Rating IMDB: 7.2
+			</figcaption>
+		</div>
+</div>
+
+<div id="lagu" class="bgimg-2 w3-display-container" style="background-image: url('assets/img/album/mic.jpg');">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide " style="text-shadow:2px 2px 2px whitesmoke;">Lagu oleh Dee</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64">
+	<h3 class="w3-center">Lagu oleh Dee Lestari</h3>
+	<h6 class="w3-center">Sebagai penulis lagu yang piawai, Dewi Lestari telah menghasilkan beberapa karya yang memanjakan telinga.<br>
+	Sebut saja lagu berjudul 'Perahu Kertas' dan 'Tahu Diri' yang dibawakan oleh Maudy Ayunda, kemudian lagu 'Firasat' yang dibawakan oleh Marcell Siahaan juga tak lepas dari tulisan tangannya. Yang paling baru adalah lagu berjudul 'Kali Kedua' yang merupakan single andalan dari album baru penyanyi cantik Raisa Andriana.
+	</h6>
+	<br>
+	<img src="assets/img/album/rectoverso.jp">
+	
+	<div style="font-size: 13px;">*Lagu yang di sediakan di portal Booksniffer hanya merupakan preview.<br>
+	Jika ingin mendengarkan lagu secara full, silahkan beli lagu original demi mendukung industri lagu Indonesia.<br>
+	</div>
+	<br>
+	<center><div class="w3-row song">
+    <div class="w3-col m6 w3-center w3-padding-large">
+		Malaikat Juga Tahu
+	   <audio controls>
+		<source src="assets/audio/malaikat-juga-tahu.mp3" type="audio/ogg">
+		<source src="horse.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+    </div>
+	</div>
+	<br>
+	<br>
+	<div class="w3-row song">
+    <div class="w3-col m6 w3-center w3-padding-large">
+		Perahu Kertas 
+		<audio controls>
+		<source src="assets/audio/_1_5_Perahu Kertas.mp3" type="audio/ogg">
+		<source src="horse.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+    </div>
+	</div>
+</div>
+
+<div id="about" class="bgimg-2 w3-display-container" style="background-image: url('assets/img/englishclub.jpg');">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide " style="text-shadow:2px 2px 2px whitesmoke;">Tentang Kami</span>
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">Tentang <em>"The Book Sniffer"</em></h3>
+  <p class="w3-center"><em>oleh Puspita Bella</em></p>
+  <p>Didirikan tahun 2018, The Book Sniffer adalah komunitas pecinta karya-karya Dee Lestari. 
+  Mengapa <em>"Sniffer?"</em> Karena kami mulai terbentuk saat karya terbaru Dee, Aroma Karsa di-<em>release</em> dan seperti yang kita tahu, Aroma Karsa membahas tentang aroma. 
+  Kami berbincang mengenai karya-karya Dee mulai dari Buku, Lagu, Film, hingga Puisinya. Kami menyebut diri sebagai Sniffers. Diketuai oleh Puspita Bella, The Book Sniffer beranggotakan lebih dari 1000 orang dari berbagai kalangan usia yang keberadaannya dapat ditemukan di berbagai sosial media.  
+  </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="assets/img/sniffers.jpg" class="w3-round w3-image" width="500">
+    </div>
+
+    <!-- Tulisan dibawah bakalan ilang kalo layarnya kecil, kalo gamau ada efek kayak gitu, (w3-hide-small) di class div bawah	 ilangin aja -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>The Book Sniffer berharap menjadi lebih dari sekadar komunitas. Lewat kontribusi yang diberikan, para Sniffers selalu mengembangkan diri. Meski berasal dari lingkungan dan latar belakang yang berbeda, namun ketertarikan kami pada sesuatu yang sama memperkenalkan dan mempersatukan kami.<br>
+	  For business inquiries, just kindly dm us at:<br>
+	  instagram.com/thebooksniffer<br>
+	  twitter.com/booksniffers_id
+	  </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal / popup gambar untuk diperbesar -->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Tutup Modal"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Foto ketiga buat background belakang -->
+<div class="bgimg-3 w3-display-container" style="background-image:url('assets/img/background/about.jpg');">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-black w3-wide" style="text-shadow:2px 2px 2px whitesmoke;">Kontak</span>
+  </div>
+</div>
+
+<!-- Daerah kontak -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">The Booksniffer's Basecamp</h3>
+  <p class="w3-center"><em>Kirimkan pesan dan saran yang membangun untuk kami.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-half w3-container">
+		<!--Script buat Mapsnya, ganti aja kalo alamatnya salah(Cari di google cara embed google maps dengan iframe)-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7927.405506848732!2d106.7240832725702!3d-6.559156231024255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x533530000f77bc38!2sBogor+Agricultural+University!5e0!3m2!1sen!2sus!4v1526707644814" 
+	  width="400" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="w3-half m6 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Bogor, Indonesia<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telp &nbsp;: +62839918392<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: thebooksniffer@gmail.com<br>
+      </div>
+      <p>Jika ingin mendonasikan buku silahkan kirimkan pesan anda..</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Nama" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <textarea name="message" class="w3-input w3-border" placeholder="Pesan" required style="resize:vertical;max-height:200px;min-height:150px;"></textarea>
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> Kirim Pesan
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+
+//variabel buat slideshownya
+var slideIndex = 1;
+
+//panggil fungsi showSlides yang parameternya diisi sama variabel slideIndex
+showSlides(slideIndex);
+
+// fungsi buat mindahin slideshow
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+// fungsi buat ngecek gambar slideshow lagi dinomor berapa
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// fungsi utama buat slideshownya
+function showSlides(n) {
+	//deklarasi variabel i buat looping
+	var i;
+	// ambil semua element yang ada class mySlides nya, trus masukkin ke array slides
+	var slides = document.getElementsByClassName("mySlides");
+	// ambil semua element yang ada class dot nya, trus masukkin ke array dots
+	var dots = document.getElementsByClassName("dot");
+	
+	// cek parameter yang dimasukkin ke fungsi showSlides, 
+	// kalo parameter yang dimasukkin ternyata lebih besar dari banyakanya element yang ada class mySlidesnya, 
+	// rubah data dari variabel slideIndex jadi 1(Balik ke gambar awal)
+	if (n > slides.length) {slideIndex = 1}    
+	
+	// cek parameter yang dimasukkinke fungsi showSlides,
+	// kalo parameter yang dimasukkin ternyata lebih besar dari banyakanya element yang ada class mySlidesnya,
+	// rubah data dari variabel slideIndex jadi panjang dari element yang punya class mySlides
+	if (n < 1) {slideIndex = slides.length}
+	
+	// looping slideshow nya, pertama variabel i dikasih nilai awal 0 karna kita akan main pake array,
+	// trus cek nilai i lebih besar daripada element yang ada class mySlides apa nggak, 
+	// kalo ternyata nilai i lebih besar daripada slides, looping gadijalanin, 
+	// kalo nilai i lebih kecil, looping semua element yang ada class mySlidesnya, trus rubah style.displaynya jadi "none" (atau di kosongiin)
+	for (i = 0; i < slides.length; i++) {
+	  slides[i].style.display = "none";  
+	}
+	
+	// looping titik keci dibawah slideshow, pertama variabel i dikasih nilai awal 0 karna kita akan main pake array,
+	// trus cek nilai i lebih besar daripada element yang ada class dot apa nggak, 
+	// kalo ternyata nilai i lebih besar daripada element yang ada class dot, looping gadijalanin, 
+	// kalo nilai i lebih kecil, looping semua element yang ada class dot, trus ilangin class actice dari dot(ngerubah warna titiknya)	
+	for (i = 0; i < dots.length; i++) {
+	  dots[i].className = dots[i].className.replace(" active", "");
+	}
+	// buat nunjukkin gambar dari slideshownya
+	slides[slideIndex-1].style.display = "block";  
+	// buat nunjukkin titik dibawah slideshow 
+	dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i><br>
+  Dibuat oleh Puspita Bella Yanuardy - J3C116115
+  </div>
+</footer>
+</body>
+</html>
